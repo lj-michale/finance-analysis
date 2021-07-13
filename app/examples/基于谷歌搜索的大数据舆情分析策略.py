@@ -110,6 +110,8 @@ all_data[['cumret_p', 'cumret_d']].tail(10)
 # 'cumret_p' 'cumret_d']
 logger.info("基于谷歌搜索的大数据舆情分析策略累积收益图形绘制")
 plt.figure(figsize=(12, 6))
+plt.rcParams['font.sans-serif'] = ['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
 plt.plot(all_data[['Date']], all_data[['cumret_p']], label='cumret_p')
 plt.plot(all_data[['Date']], all_data[['cumret_d']], label='cumret_d')
 plt.xlabel('year')
