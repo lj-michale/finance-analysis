@@ -52,7 +52,6 @@ print(paper.columns.values)
 """
 # print(paper.shape)
 # print(paper.head(1))
-
 data = pd.DataFrame({'Google_week': paper['Google End Date'],
                      'Debt': paper['debt'].astype(np.float64),
                      'Date': paper['DJIA Date'],
@@ -63,7 +62,7 @@ print(data.columns.values)
 data['Date'] = pd.to_datetime(data['Date'])
 data['Google_week'] = pd.to_datetime(data['Google_week'])
 
-# 2.2 读取我们自己下载的谷歌搜索指数数据
+# 读取我们自己下载的谷歌搜索指数数据
 # 注意：论文数据作者有自己做过处理，Normalize，虽然和我们自己下载的数据有非常高的相关性，但是仍然有差别；
 trends_download = pd.read_csv("file:///E:\\OpenSource\\GitHub\\finance-analysis\\dataset\\debt_google_trend.csv")
 print(trends_download.columns.values)
