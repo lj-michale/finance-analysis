@@ -28,8 +28,6 @@ logger = Logger(__name__, logger_path).Logger
 2.如果当周的谷歌Debt搜索量 < 过去三周平均，则做多道琼斯指数，持仓一周；
 """
 
-# ################################# 数据整理 ######################################################
-
 # 读取论文数据
 paper = pd.read_csv('file:///E:\\OpenSource\\GitHub\\finance-analysis\\dataset\\paper_data.csv',
                     sep=' ',
